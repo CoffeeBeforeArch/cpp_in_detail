@@ -3,4 +3,4 @@ authors = ["Nick"]
 language = "en"
 multilingual = false
 src = "src"
-title = "C++ in Detail"
+title = "C++ in Detail: The Linux x86_64 Edition"

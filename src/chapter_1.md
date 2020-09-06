@@ -16,13 +16,13 @@ This book is for you!
 
 ## What Does This Book Cover?
 
-This book covers three broad categories of topics:
+This book covers three broad areas:
 
 - The C++ language and standard libary implementation
 - C++ compilation and execution
 - C++ development tools
 
-In each chapter, we'll look at snippets of code that show off different parts of the C++ language. We'll then look at how our high-level source code is translated into assembly. We will then use various tools to show off things like debugging, performance analysis, and anlyzing binaries. 
+In each chapter, we'll look at snippets of code that show off different parts of the C++ language. We'll then look at how our high-level source code is translated into assembly, and use various tools to show off things like debugging, performance analysis, and anlyzing binaries.
 
 ## Background
 
@@ -30,7 +30,7 @@ This book is geared towards beginner and intermediate-level programmers that are
 
 ## Setup
 
-This version of the book was designed covers information specific to C++ compiled on a Linux system with the GCC 10 compiler, with an x86-64 processor.
+This version of the book was covers information specific to C++ compiled on a Linux system with the GCC 10 compiler, with an x86-64 processor.
 
 The exact setup used for this books was:
 
