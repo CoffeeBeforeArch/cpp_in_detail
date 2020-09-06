@@ -37,4 +37,3 @@ The exact setup used for this books was:
 - O.S.: Ubuntu 20.04
 - Compiler: gcc-10.2
 - Processor: Intel i7-9700
-
