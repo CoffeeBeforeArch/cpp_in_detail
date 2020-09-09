@@ -50,8 +50,8 @@ The signed-ness of the integer type can be changed using the keywords `signed` a
 
 Floating point types are used to represent signed and unsigned decimal numbers according to the IEEE-754 Floating Point Standard. There are two key floating point types:
 
-- Single-precision
-- Double-precision
+- Single-precision (`float`)
+- Double-precision (`double`)
 
 Single-precision floating point numbers are guaranteed to be 32 bits, and dobule-precision number are guaranteed to be 64 bits.
 
