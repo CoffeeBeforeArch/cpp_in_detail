@@ -1,11 +1,11 @@
 \documentclass[11pt,fancy,authoryear]{elegantbook}
 
-\title{C++ in Detail}
-\subtitle{An in-depth guide to C++ on x86 systems with GCC}
+\title{Matrix Multiplication}
+\subtitle{An in-depth guide to optimizing matrix multiplication}
 
 \author{Nick Green}
 \institute{CoffeeBeforeArch}
-\date{December 31, 2020}
+\date{January 3, 2021}
 \version{0.0}
 %\bioinfo{Bio}{Information}
 
@@ -25,106 +25,42 @@
 
 \chapter{Introduction}
 
-From databases and web browsers to operating systems and compilers, C++ can be found almost everywhere. This along with a incredibly active community makes it a great time to start learning C++!
+\chapter{Baseline}
 
-\section{Why This Book on C++?}
+\section{Serial}
 
-Out of all the great books on C++, why should you pick this one? Here is a list of reasons!
+\section{Parallel}
 
-\begin{itemize}
-  \item \textbf{It's free:} This is book (and its source) will always be free to download
-  \item \textbf{It can be updated:} Printed books can not be updated. With a digital book, I can make modifications as new standards of C++ get approved, or correct errors in the text.
-  \item \textbf{It fills in a gap left by other books:} Many entry level books focus solely on the C++ language, and avoid talking about implementation-specific details. This book breaks this mold by discussing these details which can be increadibly imprortant in practice.
-\end{itemize}
+\chapter{Blocked}
 
-\section{Intended Audience}
+\section{Serial}
 
-This book was written as a companion piece to my YouTube series \textbf{C++ Crash Course}. As such, the intended audience is expected to have no prior background in C++ programming.
+\section{Parallel}
 
-Having some knowledge of basic programming concepts (e.g., types, functions, etc.) would be useful.
+\chapter{Blocked Column}
 
-\section{Environment}
+\section{Serial}
 
-\begin{itemize}
-  \item \textbf{Operating System: } Ubuntu 20.04
-  \item \textbf{Compiler: } GCC 10.2
-  \item \textbf{Processor: } Intel x86\-64
-\end{itemize}
+\section{Parallel}
 
-\section{About the Author}
+\chapter{Blocked Column Multi-Output}
 
-My name is Nick, and I'm a computer systems architect working on deep learning accelerator performance in the San Francisco Bay Area.
+\section{Serial}
 
-My start in programming came during my undergraduate degree in electrical engineering where I took \textit{Engineering Programming with C}. While I enjoyed this course, I did not take any more dedicated programming classes during this degree (although I did some basic MATLAB and Python programming as required by various coursework).
+\section{Parallel}
 
-My start with C++ came during my Ph.D. (incomplete), where I used and developed the GPGPU architecture simulator, GPGPU-Sim. This simulator (largely written in C++), was where I spent a large portion of my time.
+\chapter{GPU with CUDA}
 
-After approximately one year of writing C-like C++, I decided to take C++ programming more seriously. There was no single book or resource I used to learn the language. Instead, I would run across a piece of C++ I didn't understand (something like a container or template), search the internet to see out how it worked, then write a minimal example to solidify my understanding. These minimal examples are what eventually became my YouTube series \textbf{C++ Crash Course}.
+\section{Baseline}
 
-From then on, C++ and high performance software became one of my passions. I began writing benchmarks in C++, writing blog posts, and doing teaching livestreams.
+\section{Shared Memory}
 
-\chapter{Foundation}
+\chapter{Libraries}
 
-Before we dive into code samples, we need to first discuss some of the foundational parts of C++. This includes the compiler, type system, and functions. It is important to start our journey here, because the compiler, types, and functions play a role in every C++ program.
+\section{Intel MKL}
 
-\section{The Compiler}
+\section{cuBLAS}
 
-\section{Types}
-
-\section{Functions}
-
-\chapter{Basics}
-
-\section{Hello World!}
-
-\section{Working with Variables}
-
-\chapter{Control Flow}
-
-\section{Conditional Statements}
-
-\subsection{If and Else Satements}
-
-\subsection{Switch Statements}
-
-\section{Loops}
-
-\subsection{For Loops}
-
-\subsection{While and Do-While Loops}
-
-\section{Functions}
-
-\subsection{Basics}
-
-\subsection{Overloading}
-
-\subsection{Templates}
-
-\chapter{Memory}
-
-\section{Pointers and References}
-
-\section{Dynamic Memory Allocation}
-
-\chapter{Objects}
-
-\section{Classes and Structs}
-
-\subsection{Constructors}
-
-\subsection{Destructors}
-
-\subsection{Copy Constructors}
-
-\subsection{Operators}
-
-\section{Templates}
-
-\section{Inheritance}
-
-\section{Polymorphism}
-
-\chapter{STL Containers and Algorithms}
+\chapter{Conclusion}
 
 \end{document}
