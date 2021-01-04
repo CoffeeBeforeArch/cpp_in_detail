@@ -69,9 +69,63 @@ Before we dive into code samples, we need to first discuss some of the foundatio
 
 \section{The Compiler}
 
-\section{Types}
+Processors can not directly read/execute high-level C++ code. It first must be translated into the instructions that the processor can understand (the processor's instruction set). This is done with another program known as the compiler.
+
+The purpose of the compiler is to translate code in some source language into a target language. For the majority of examples in this book, we will focus on using the compiler to translate source code written in C++, to machine code that can execute on an x86 processor.
+
+\section{The C++ Type System}
+
+At the lowest level, every part of a program (from the instructions to the data) is composed of bits. How we interpret those bits is determined by types. Types in C++ fall into two categories: fundamental types, and compound types.
+
+\subsection{Fundamental Types}
+
+Fundamental types (sometimes referred to as built-in types) are those types are are built into the compiler, and do not require the inclusion of any other source files to use. These can be broken into the void type, integral types, and floating-point types.
+
+\subsubsection{The Void Type}
+
+Void is a type with an empty set of values. This means that no value can be of the void type. As no value can be of type void, what is it used for? 
+
+In practice, void is used to express a lack of data (e.g., to express no data is returned from or passed to a function).
+
+\subsubsection{The Boolean Type}
+
+The boolean type, \lstinline{bool}, is capable of holding one of two values: \lstinline{true} and lstinline{false}.
+
+\subsubsection{Integral Types}
+
+Integral types are used to represent whole numbers that can be either signed (positive or negative) or unsigned (only positive). The basic form of this type is the \lstinline{int}.
+
+\subsubsection{Floating-Point Types}
+
+Floating-point types are used to represent decimal numbers according to the IEEE-754 floating point standard. The two core types in this category are \lstinline{float} (32-bits) and \lstinline{double} (64-bits).
+
+\subsection{Compound Types}
+
+All types that are not categorized as fundamental are considered to be compound types. According to the C++ standard, compound types can be constructed in the following ways:
+
+\begin{itemize}
+  \item Arrays of objects of a given type
+  \item Functions which have parameters of given types and return void or references or objects of a given type
+  \item Pointers to cv void or objects or functions (including static members of classes) of a given type
+  \item References to objects or functions of a given type
+  \item Classes
+  \item Unions
+  \item Enumerations
+  \item Pointers to non-static class members
+\end{itemize}
+
+Two intuitive ways we can think about compound types are based on where the type comes from, and what they are made of. Compound types are often user-defined (i.e. not part of the compiler). Compound types are also typically built on other types. For example, \lstinline{int} is a fundamental type, but we take the address of the integer (where it exists in memory), we get a pointer to an integer (a compound type, based on the type \lstinline{int}).
 
 \section{Functions}
+
+Functions allow us to associate a name with a sequence of statements. At their core, a function has four parts:
+
+\begin{itemize}
+  \item A return type
+  \item A name
+  \item An argument list
+  \item A function body
+\end{itemize}
 
 \chapter{Basics}
 
