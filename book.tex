@@ -114,17 +114,69 @@ All types that are not categorized as fundamental are considered to be compound 
   \item Pointers to non-static class members
 \end{itemize}
 
-Two intuitive ways we can think about compound types are based on where the type comes from, and what they are made of. Compound types are often user-defined (i.e. not part of the compiler). Compound types are also typically built on other types. For example, \lstinline{int} is a fundamental type, but we take the address of the integer (where it exists in memory), we get a pointer to an integer (a compound type, based on the type \lstinline{int}).
+Two intuitive ways we can think about compound types are based on where the type comes from, and what they are made of. Compound types are often user-defined (i.e. not part of the compiler). For example, we can make custom types using structs and classes.
+
+Compound types are also typically built on other types. For example, \lstinline{int} is a fundamental type, but when we take the address of that integer (where it exists in memory), we get a pointer to an integer (a compound type, based on the fundamental type \lstinline{int}).
 
 \section{Functions}
 
-Functions allow us to associate a name with a sequence of statements. At their core, a function has four parts:
+Functions allow us to associate a name with a sequence of statements. In this section, we'll be looking at the basic structure of functions in C++, and the special case of functions called \lstinline{main}.
+
+\subsection{Core Parts of Functions}
+
+At their core, a function has four parts:
 
 \begin{itemize}
-  \item A return type
-  \item A name
-  \item An argument list
-  \item A function body
+  \item A return type - The type of value returned by the functions
+  \item A name - Used as an identifier for the function
+  \item A comma-separated parameter list - The types and names of values we want to pass to the function
+  \item A function body - The set of statements this function executes
+\end{itemize}
+
+Here is a simple function we can use as an example:
+
+\begin{lstlisting}[language=C++]
+int myFunction(int a) {
+  return a;
+}
+\end{lstlisting}
+
+If we break this down into the core parts of the function, we have:
+
+\begin{itemize}
+  \item The return type - \lstinline{int}
+  \item The name - \lstinline{myFunction}
+  \item The parameter \lstinline{int a}
+  \item The function body \lstinline{return a;}
+\end{itemize}
+
+\subsection{The Main Function}
+
+Every program in both C and C++ requires a function named \lstinline{main}. The \lstinline{main} function is special because it is the entry point for our program (where execution begins when we run our executable). It also comes in two signatures.
+
+The first function signature is what we will primarily use in this book:
+
+\begin{lstlisting}[language=C++]
+int main() {
+  return 0;
+}
+\end{lstlisting}
+
+This version of \lstinline{main} returns an \lstinline{int} and does not take any arguments. The return value from \lstinline{main} (\lstinline{0} in this case) is used to signal that our program completed successfully (with a non-zero value meaning some sort of error occured). \lstinline{main} is also unique in the fact that we can omit the \lstinline{return} statement from our function, and it will by defualt perform \lstinline{return 0;}.
+
+The second form of \lstinline{main} is when we want to pass input values to our program:
+
+\begin{lstlisting}[language=C++]
+int main(int argc, char *argv){
+  return 0;
+}
+\end{lstlisting}
+
+The only major difference in this form of \lstinline{main} is that it has two parameters:
+
+\begin{itemize}
+  \item \lstinline{int argc} - The number of arguments
+  \item \lstinline{char *argv[]} - The arguments stored as strings in an array
 \end{itemize}
 
 \chapter{Basics}
