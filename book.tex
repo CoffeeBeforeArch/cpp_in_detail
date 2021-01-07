@@ -179,9 +179,11 @@ The only major difference in this form of \lstinline{main} is that it has two pa
   \item \lstinline{char *argv[]} - The arguments stored as strings in an array
 \end{itemize}
 
+For the majority of this series we will be using the first form of the \lstinline{main} function.
+
 \chapter{Basics}
 
-Before we can write complex software, we have to master the basics. In this chapter, we'll go over the most simple program we can write, the classical "Hello world!" example, and look at how to work with variables in C++.
+Before we can write complex software, we have to master the basics. In this chapter, we will cover writing, compiling and executing C++ code, the classical "Hello world!" example, and how to work with variables in C++.
 
 \begin{introduction}
   \item Basic C++
@@ -191,13 +193,29 @@ Before we can write complex software, we have to master the basics. In this chap
 
 \section{Basic C++}
 
+\subsection{The Most Simple C++ Program}
+
+The most simple program we can write in C++ is a one that does absolutely nothing! For this we us an empty \lstinline{main} function.
+
 \begin{lstlisting}[language=C++]
 int main() {
   return 0;
 }
 \end{lstlisting}
 
+\subsection{Compiling our Program}
+
+Now that we have a fully formed C++ program, we need to turn it into something that we can execute. In this book, we'll be using the GNU Compiler Collection (GCC), and the compiler driver g++.
+
+As a compiler driver, g++ drives each step of translating our high-level C++ into an executable.
+
+\subsection{Executing our Program}
+
+Now that we have an executable, we need to execute (run) our program.
+
 \section{Hello World!}
+
+Now that we know how to write, compile, and run a basic C++ program, we can look at something slightly more interesting.
 
 \begin{lstlisting}[language=C++]
 // Prints "Hello, World!" to the console using cout
@@ -206,13 +224,10 @@ int main() {
 // Pastes the contents of file(s) where #include is located
 #include <iostream>
 
-// Use cout from namespace std
-using std::cout;
-
 // All C++ program require a main functions (entry point to the program)
 int main() {
   // Pass "Hello, World!" to the cout stream object
-  cout << "Hello, World!\n";
+  std::cout << "Hello, World!\n";
 
   // Return 0 typically means we did not encounter an error
   return 0;
