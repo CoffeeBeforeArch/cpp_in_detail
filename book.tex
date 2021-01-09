@@ -236,7 +236,36 @@ int main() {
 
 \section{Working with Variables}
 
+Variables allow us to associate a piece of memory with a name. Defining a variable requires two parts:
+
+\begin{enumerate}
+  \item A Type
+  \item A Name
+\end{enumerate}
+
+A variable's type determines how much memory will be reserved, where it can be placed in memory (its alignment), and how we can interact with that piece of memory (e.g., what operations we can perform).
+
+The name of our variable is simply how we refer to it in our program. The name of a variable can be \textit{almost} anything. Below are the rules about variable names:
+
+\begin{itemize}
+  \item Variables names must be within 1 and 255 characters
+  \item Variables must begin with a letter or underscore
+  \item After the first character, the remaining characters can be letters, numbers, or underscores
+  \item Variable names are case sensative
+  \item Reserved words (e.g., \lstinline{return}) can not be used as a variable name
+\end{itemize}
+
+In addition to these rules, variable names may not be repeated in the same scope (curly brackets).
+
 \chapter{Control Flow}
+
+We don't always want to execute every line of code in our program. We often want to execute different portions of code based on values in our program. For this, we can use conditional statements, loops, and functions.
+
+\begin{introduction}
+  \item Conditional Statements
+  \item Loops
+  \item Functions
+\end{introduction}
 
 \section{Conditional Statements}
 
