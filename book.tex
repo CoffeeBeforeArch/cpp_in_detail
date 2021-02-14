@@ -114,7 +114,7 @@ All types that are not categorized as fundamental are considered to be compound 
   \item Pointers to non-static class members
 \end{itemize}
 
-Two intuitive ways we can think about compound types are based on where the type comes from, and what they are made of. Compound types are often user-defined (i.e. not part of the compiler). For example, we can make custom types using structs and classes.
+Two intuitive ways we can think about compound types are based on where the type comes from, and what they are made of. Compound types are often user-defined (i.e. not built into the compiler). For example, we can make custom types using structs and classes.
 
 Compound types are also typically built on other types. For example, \lstinline{int} is a fundamental type, but when we take the address of that integer (where it exists in memory), we get a pointer to an integer (a compound type, based on the fundamental type \lstinline{int}).
 
@@ -238,7 +238,45 @@ Lets's take some time deconstructing each part of this program.
 
 \subsection{Comments}
 
+Comments are lines of source code that have no impact on execution because they are ignored by our compiler. We typically use comments for two purposes:
+
+\begin{enumerate}
+  \item Documentation
+  \item Temporarily disabling code
+\end{enumerate}
+
+Documentation helps make software easier to reason about. For example, comments about what a function or snippet of code can save programmers the time of having to read the entire function or snippet. Within collaborative projects, comments about who the code-owner/author make it easier to identify who to seek help from
+
+In addition to documentation, temporarily disabling code can be useful when testing/debugging. There may be situations where we want to temporarily disable code but not delete it. Comments allow us to keep the text in the file, and tell the compiler to ignore it.
+
+There are two ways we can write comments in C++:
+
+\begin{enumerate}
+  \item Single-line comments
+  \item Block comments
+\end{enumerate}
+
+Single-line comments begin with two slashes (\lstinline{//}). Any code after the two slashes and to the end of the line will be ignored by the compiler. Our first two lines of our program are an example of this:
+
+\begin{lstlisting}[language=C++]
+// Prints "Hello, World!" to the console using cout
+// By: Nick from CoffeeBeforeArch
+\end{lstlisting}
+
+Block comments allow us to comment out multiple lines without haveing to add two slashes to every line. The start of our block comment begins with \lstinline{/*}, and ends with \lstinline{*/}. Everything between these two markers will be ignored by the compiler. For example, we can re-write our comments at the top of our program as follows:
+
+\begin{lstlisting}[language=C++]
+/*
+Prints "Hello, World!" to the console using cout
+By: Nick from CoffeeBeforeArch
+*/
+\end{lstlisting}
+
 \subsection{Include Statements and the Standard Library}
+
+One key thing we want to avoid when programming is reinventing the wheel. One of the best ways we can do this is by making use existing libraries. One of the most important libraries in C++ is the C++ Standard Library.
+
+The C++ Standard Library is a collection of containers, algorithms, and utilities that are part of the C++ Language Standard. However, before we can use them in our program, we must tell the compiler (more specifically the preprocessor) to fetch relevant source files. We do this through include statements.
 
 \subsection{The cout Stream Object and Namespaces}
 
